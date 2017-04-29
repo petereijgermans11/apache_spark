@@ -1,0 +1,9 @@
+Zie: https://casperkoning.github.io/#/
+
+val rdd = sc.textFile("d:/Spark/shakespeare.txt")
+val rddCount = rdd.flatMap(line => line.split("\\s")).map(word => word.toLowerCase).filter(word => word == "rdd" || word == "rdds").count()
+
+val rddCount =  flatMap(l => Word.findAllIn(l.toLowerCase()).toSeq)
+
+println("I keep nagging about RDDs in this presentation, to be precise, " +
+  "I mention them " + rddCount + " times")
